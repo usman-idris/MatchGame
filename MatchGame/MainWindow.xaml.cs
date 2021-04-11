@@ -37,6 +37,12 @@ namespace MatchGame
             SetUpGame();
         }
 
+
+        /// <summary>
+        /// How the timer will function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Timer_Tick(object sender, EventArgs e)
         {
             tenthsOfSecondsElapsed++;
@@ -48,6 +54,9 @@ namespace MatchGame
             }
         }
 
+        /// <summary>
+        /// Setup the emojis and everything needed for the game to run
+        /// </summary>
         private void SetUpGame()
         {
             List<string> animalEmoji = new List<string>()
@@ -80,6 +89,11 @@ namespace MatchGame
             matchesFound = 0;
         }
 
+        /// <summary>
+        /// Method for when an emoji has been clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock textBlock = sender as TextBlock;
@@ -104,6 +118,11 @@ namespace MatchGame
             }
         }
 
+        /// <summary>
+        /// Method for when the textblock for the timer has been clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (matchesFound == 8)
